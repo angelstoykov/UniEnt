@@ -1,5 +1,5 @@
 import { getHome } from "./controllers/homeController.js";
-import { getLogin, getRegister } from "./controllers/userController.js";
+import { getLogin, getRegister, postRegister } from "./controllers/userController.js";
 
 const app = Sammy("body", function() {
     this.use("Handlebars", "hbs");
@@ -9,6 +9,8 @@ const app = Sammy("body", function() {
     this.get("#/login", getLogin);
 
     this.get("#/register", getRegister);
+    
+    this.post("#/register", postRegister);
 })
 
 app.run("#/home");

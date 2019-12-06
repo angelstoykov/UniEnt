@@ -11,7 +11,7 @@ export function getData() {
 
 export function saveUser(data) {
     saveData("userInfo", data);
-    saveData("authToken", data._kmd.authoken);
+    saveData("authToken", data._kmd.authtoken);
 }
 
 export function removeUser() {
